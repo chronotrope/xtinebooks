@@ -10,7 +10,9 @@ class BookPost(models.Model):
     rating = models.IntegerField()
     image_url = models.CharField(max_length=150)
     timestamp = models.DateTimeField()
-admin.site.register(BookPost)
     
 class BookPostAdmin(admin.ModelAdmin):
-    list_dispay = ('book_title', 'timestamp')
+    list_display = ('book_title', 'timestamp')
+    
+admin.site.register(BookPost, BookPostAdmin)
+
