@@ -11,6 +11,9 @@ class BookPost(models.Model):
     image_url = models.CharField(max_length=150)
     timestamp = models.DateTimeField()
     
+    class Meta:
+        ordering = ('-timestamp',)
+    
 class BookPostAdmin(admin.ModelAdmin):
     list_display = ('book_title', 'timestamp')
     

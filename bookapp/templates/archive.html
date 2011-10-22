@@ -1,7 +1,10 @@
 <!-- Create your views here.-->
+{% extends "base.html" %}
+{% block content %}
 {% for post in posts %}
 <h2>{{ post.book_title }}</h2>
-<p>{{ post.timestamp }}</p>
+<p>{{ post.timestamp|date:"l, F jS, P"}}</p>
 <p>{{ post.book_desc }}</p>
 
 {% endfor %}
+{% endblock %}
