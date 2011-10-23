@@ -12,7 +12,7 @@ class BookPost(models.Model):
     timestamp = models.DateTimeField()
     
     class Meta:
-        ordering = ('-timestamp',)
+        ordering = ('-timestamp', 'book_title')
     
 class BookPostAdmin(admin.ModelAdmin):
     list_display = ('book_title', 'timestamp')
