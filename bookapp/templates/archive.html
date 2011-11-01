@@ -4,7 +4,11 @@
 {% for post in posts %}
 <h2>{{ post.book_title }}</h2>
 <p>{{ post.timestamp|date:"l, F jS, P"}}</p>
+
+<p>ID = {{ post.id}}</p>
+
 <p>{{ post.book_desc }}</p>
+
 
 {% endfor %}
 {% endblock %}
