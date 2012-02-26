@@ -7,7 +7,9 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    # url(r'^$', 'xtinebooks.views.home', name='home'),
+    #url(r'^$', 'xtinebooks.views.home', name='home'),
+    url(r'^$', include('xtinebooks.bookapp.urls')),
+
     # url(r'^xtinebooks/', include('xtinebooks.foo.urls')),
     url(r'^bookapp/', include('xtinebooks.bookapp.urls')),
 
